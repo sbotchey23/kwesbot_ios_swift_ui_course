@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB9061302A83D6A400CFC3A4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90612F2A83D6A400CFC3A4 /* ColorExtension.swift */; };
 		C51BD47D2A7F6CB5009F00E8 /* HikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BD47C2A7F6CB5009F00E8 /* HikeApp.swift */; };
 		C51BD47F2A7F6CB5009F00E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BD47E2A7F6CB5009F00E8 /* ContentView.swift */; };
 		C51BD4812A7F6CB7009F00E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C51BD4802A7F6CB7009F00E8 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB90612F2A83D6A400CFC3A4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		C51BD4792A7F6CB5009F00E8 /* Hike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51BD47C2A7F6CB5009F00E8 /* HikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeApp.swift; sourceTree = "<group>"; };
 		C51BD47E2A7F6CB5009F00E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB90612E2A83D43100CFC3A4 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BB90612F2A83D6A400CFC3A4 /* ColorExtension.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		C51BD4702A7F6CB5009F00E8 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				C51BD47C2A7F6CB5009F00E8 /* HikeApp.swift */,
+				BB90612E2A83D43100CFC3A4 /* Utility */,
 				C51BD47E2A7F6CB5009F00E8 /* ContentView.swift */,
 				C51BD4802A7F6CB7009F00E8 /* Assets.xcassets */,
 				C51BD4822A7F6CB7009F00E8 /* Preview Content */,
@@ -155,6 +166,7 @@
 				C51BD48B2A817E3F009F00E8 /* CardView.swift in Sources */,
 				C51BD47D2A7F6CB5009F00E8 /* HikeApp.swift in Sources */,
 				C51BD48E2A81830D009F00E8 /* CustomBackgroundView.swift in Sources */,
+				BB9061302A83D6A400CFC3A4 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
