@@ -16,6 +16,37 @@ struct CardView: View {
             VStack {
                 // MARK: - HEADER
                 
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Hiking")
+                            .fontWeight(.black)
+                            .font(.system(size: 52))
+                            .foregroundStyle(
+                                LinearGradient(
+                                    colors: [
+                                        .customGrayLight,
+                                        .customGrayMedium],
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                )
+                        )
+                        
+                        Spacer()
+                        
+                        Button {
+                            // ACTION: Show a sheet
+                            print("The button was pressed!")
+                        } label: {
+                        CustomButtonView()
+                        }
+                    }
+                    Text("Fun and Enjoyable activity for friends and families.")
+                        .multilineTextAlignment(.leading)
+                        .italic()
+                        .foregroundColor(.customGrayMedium)
+                } //: HEADER
+                .padding(.horizontal, 30)
+                
                 // MARK: - MAIN CONTENT
                 
                 ZStack {
@@ -33,6 +64,7 @@ struct CardView: View {
                         .resizable()
                         .scaledToFit()
                 }
+                // MARK: - FOOTER
             }
         } //: CARD
         .frame(width: 320, height: 570)
