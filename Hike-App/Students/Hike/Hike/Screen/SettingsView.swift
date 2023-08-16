@@ -77,6 +77,54 @@ struct SettingsView: View {
                 // LabeledContent("Application", value: "Hike")
                 
                 // 2. ADVANCED LABELED CONTENT
+                CustomListRowView(
+                    rowLabel: "Application",
+                    rowIcon: "apps.iphone",
+                    rowContent: "HIKE",
+                    rowTintColor: .blue
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Compatibility",
+                    rowIcon: "info.circle",
+                    rowContent: "iOS, iPadOS",
+                    rowTintColor: .red
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Technology",
+                    rowIcon: "swift",
+                    rowContent: "Swift",
+                    rowTintColor: .orange
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Version",
+                    rowIcon: "gear",
+                    rowContent: "1.0",
+                    rowTintColor: .purple
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Developer",
+                    rowIcon: "ellipsis.curlybraces",
+                    rowContent: "Kwesbot Ltd.",
+                    rowTintColor: .mint
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Designer",
+                    rowIcon: "paintpalette",
+                    rowContent: "Alex Asare",
+                    rowTintColor: .pink
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Website",
+                    rowIcon: "globe",
+                    rowContent: "www.afrorganic.co.uk",
+                    rowTintColor: .indigo
+                )
                 
             } //: SECTION
         } //: LIST
