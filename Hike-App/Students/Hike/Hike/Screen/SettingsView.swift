@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct SettingsView: View {
+    // MARK: - PROPERTIES
+    private let alternateAppIcons: [String] = [
+    "AppIcon-MagnifyingGlass",
+    "AppIcon-Campfire",
+    "AppIcon-Backpack",
+    "AppIcon-Camera",
+    "AppIcon-Map",
+    "AppIcon-Mushroom"
+    ]
+    
     var body: some View {
         List {
         // MARK: - SECTION: HEADER
@@ -63,6 +73,43 @@ struct SettingsView: View {
             
         // MARK: - SECTION: ICONS
         
+            Section(header: Text("Alternate Icons")) {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 12) {
+                        ForEach(alternateAppIcons.indices, id: \.self) { item in
+                            Button{
+                                print("Icon \(alternateAppIcons[item]) was pressed.")
+                                UIApplication
+                                    .shared
+                                    .setAlternateIconName(alternateAppIcons[item]) { error in
+                                        if error != nil {
+                                            print("Failed request to update the app's icon: \(String(describing: error?.localizedDescription))")
+                                        } else {
+                                            print("Success! You have changed the app's icon to \(alternateAppIcons[item])")
+                                        }
+                                    }
+                            } label: {
+                                Image("\(alternateAppIcons[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .cornerRadius(16)
+                            }
+                        .buttonStyle(.borderless)
+                        }
+                    }
+                } //: SCROLL VIEW
+                .padding(.top, 12)
+                
+                Text("Choose your favourite app icon from the collection above")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.secondary)
+                    .font(.footnote)
+                    .padding(.bottom, 12)
+            } //: SECTION
+            .listRowSeparator(.hidden)
+            
         // MARK: - SECTION: ABOUT
             Section(
             header: Text("About the app"),
@@ -122,10 +169,10 @@ struct SettingsView: View {
                 CustomListRowView(
                     rowLabel: "Website",
                     rowIcon: "globe",
-                    rowContent: "www.afrorganic.co.uk",
-                    rowTintColor: .indigo
+                    rowTintColor: .indigo,
+                    rowLinkLabel: "My Github",
+                    rowLinkDestination: "https://github.com/sbotchey23"
                 )
-                
             } //: SECTION
         } //: LIST
     }
