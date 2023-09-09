@@ -16,6 +16,7 @@
 		C5C5FD342A98086C00EBF683 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5FD332A98086C00EBF683 /* OnboardingView.swift */; };
 		C5C5FD362A98089C00EBF683 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5FD352A98089C00EBF683 /* HomeView.swift */; };
 		C5C5FD382A9D8ADD00EBF683 /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5FD372A9D8ADD00EBF683 /* CircleGroupView.swift */; };
+		C5C5FD3A2AAC69C700EBF683 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5FD392AAC69C700EBF683 /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C5C5FD332A98086C00EBF683 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C5C5FD352A98089C00EBF683 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C5C5FD372A9D8ADD00EBF683 /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
+		C5C5FD392AAC69C700EBF683 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		C5C5FD312A9803EF00EBF683 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C5C5FD392AAC69C700EBF683 /* AudioPlayer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				C5C5FD362A98089C00EBF683 /* HomeView.swift in Sources */,
 				C5C5FD1F2A97FEE600EBF683 /* ContentView.swift in Sources */,
 				C5C5FD1D2A97FEE600EBF683 /* RestartApp.swift in Sources */,
+				C5C5FD3A2AAC69C700EBF683 /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
