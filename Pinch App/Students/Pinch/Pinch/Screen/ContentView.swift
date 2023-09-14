@@ -31,6 +31,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .preferredColorScheme(.dark)
-            .previewDevice("iPhone 13")
+            .previewDevice("iPhone 14")
     }
 }
