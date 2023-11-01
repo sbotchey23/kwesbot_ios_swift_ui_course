@@ -188,6 +188,7 @@ struct ContentView: View {
                             .onTapGesture(perform: {
                                 isAnimating = true
                                 pageIndex = item.id
+                                resetImageState()
                             })
                     }
                     
