@@ -16,6 +16,7 @@
 		C557AE832AF4A78200538341 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557AE822AF4A78200538341 /* OnboardingView.swift */; };
 		C557AE862AF4B6BB00538341 /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557AE852AF4B6BB00538341 /* FruitModel.swift */; };
 		C557AE892AF4B96A00538341 /* FruitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557AE882AF4B96A00538341 /* FruitData.swift */; };
+		C557AE8B2AF5560400538341 /* FruitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557AE8A2AF5560400538341 /* FruitRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		C557AE822AF4A78200538341 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C557AE852AF4B6BB00538341 /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
 		C557AE882AF4B96A00538341 /* FruitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitData.swift; sourceTree = "<group>"; };
+		C557AE8A2AF5560400538341 /* FruitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				C557AE7E2AF20E7400538341 /* FruitCardView.swift */,
 				C557AE802AF2226400538341 /* StartButtonView.swift */,
+				C557AE8A2AF5560400538341 /* FruitRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				C557AE892AF4B96A00538341 /* FruitData.swift in Sources */,
 				C557AE7F2AF20E7400538341 /* FruitCardView.swift in Sources */,
+				C557AE8B2AF5560400538341 /* FruitRowView.swift in Sources */,
 				C557AE812AF2226400538341 /* StartButtonView.swift in Sources */,
 				C557AE712AEB403500538341 /* ContentView.swift in Sources */,
 				C557AE832AF4A78200538341 /* OnboardingView.swift in Sources */,
