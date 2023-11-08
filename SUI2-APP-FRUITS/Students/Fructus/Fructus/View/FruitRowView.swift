@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct FruitRowView: View {
-    // MARK: - PROPERTIES
+    // MARK: - PROPERTIES -
     var fruit: Fruit
     
-    // MARK: - BODY
+    // MARK: - BODY -
     
     var body: some View {
         HStack {
@@ -40,7 +40,7 @@ struct FruitRowView: View {
     }
 }
 
-// MARK: - PREVIEW
+// MARK: - PREVIEW -
 
 #Preview {
     FruitRowView(fruit: fruitsData[0])

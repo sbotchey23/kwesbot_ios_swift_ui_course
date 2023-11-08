@@ -7,12 +7,13 @@
 
 import SwiftUI
 
+/// this is the description
 struct OnboardingView: View {
-    // MARK: - PROPERTIES
+    // MARK: - PROPERTIES -
     
     var fruits: [Fruit] = fruitsData
     
-    // MARK: - BODY
+    // MARK: - BODY -
     
     var body: some View {
         TabView {

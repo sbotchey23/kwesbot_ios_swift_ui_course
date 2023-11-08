@@ -44,15 +44,20 @@ struct FruitDetailView: View {
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                         
                         // LINK
-                        
+                        SourceLinkView()
+                            .padding(.top, 10)
+                            .padding(.bottom, 40)
                     } //: VSTACK
                     .padding(.horizontal, 20)
                     .frame(maxWidth: 640, alignment: .center)
+                    
                 } //: VSTACK
                 .navigationBarTitle(fruit.title, displayMode: .inline)
                 .navigationBarHidden(true)
+                
             } //: SCROLLVIEW
             .edgesIgnoringSafeArea(.top)
+            
         } //: NAVIGATIONVIEW
     }
 }
