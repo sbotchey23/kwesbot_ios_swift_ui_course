@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct FruitDetailView: View {
-    // MARK: - PROPERTIES
+    // MARK: - PROPERTIES -
+    
     var fruit: Fruit
     
     
-    // MARK: - BODY
+    // MARK: - BODY -
+    
     var body: some View {
         NavigationView{
             ScrollView(.vertical, showsIndicators: false) {
@@ -33,6 +35,7 @@ struct FruitDetailView: View {
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                         
                         // NUTRIENTS
+                        FruitNutrientsView(fruit: fruit)
                         
                         // SUBHEADLINE
                         Text("Learn more about \(fruit.title)".uppercased())
@@ -62,7 +65,8 @@ struct FruitDetailView: View {
     }
 }
 
-// MARK: - PREVIEW
+// MARK: - PREVIEW -
+
 #Preview {
     FruitDetailView(fruit: fruitsData[0])
 }
