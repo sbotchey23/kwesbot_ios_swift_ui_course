@@ -42,6 +42,7 @@ struct FruitCardView: View {
                 
                 // BUTTON: START
                 StartButtonView()
+                
             } //: VSTACK
         } //: ZSTACK
         .onAppear{
