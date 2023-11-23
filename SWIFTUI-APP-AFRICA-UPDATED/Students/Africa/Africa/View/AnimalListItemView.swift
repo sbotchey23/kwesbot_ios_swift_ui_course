@@ -41,7 +41,7 @@ struct AnimalListItemView: View {
 #Preview {
     @State var animals: [Animal] = Bundle.main.decode("animals.json")
 
-    return AnimalListItemView(animal: animals[5])
+    return AnimalListItemView(animal: animals[1])
         .previewLayout(.sizeThatFits)
         .padding()
 }
