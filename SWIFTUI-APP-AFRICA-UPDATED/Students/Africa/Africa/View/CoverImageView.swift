@@ -27,7 +27,7 @@ struct CoverImageView: View {
 
 // MARK: - PREVIEW
 
-#Preview (traits: .sizeThatFitsLayout) {
+#Preview(traits: .sizeThatFitsLayout) {
     CoverImageView()
         .previewLayout(.fixed(width: 400, height: 300))
 }
