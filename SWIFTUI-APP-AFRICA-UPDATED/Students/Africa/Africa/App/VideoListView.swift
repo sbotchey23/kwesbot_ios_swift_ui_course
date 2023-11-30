@@ -26,7 +26,11 @@ struct VideoListView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button()
+                    Button(action: {
+                        //: SHUFFLE VIDEOS
+                    }) {
+                        Image(systemName: "arrow.2.squarepath")
+                    }
                 }
             }
         } //: NAVIGATIONVIEW
