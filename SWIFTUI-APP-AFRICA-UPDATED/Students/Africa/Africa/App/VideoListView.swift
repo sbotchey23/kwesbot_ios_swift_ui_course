@@ -11,14 +11,18 @@ struct VideoListView: View {
     // MARK: - PROPERTIES
     @State var videos: [Video] = Bundle.main.decode("videos.json")
     
+    let hapticImpact = UIImpactFeedbackGenerator(style: .medium)
+    
     // MARK: - BODY
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(videos) { item in
-                    VideoListItemView(video: item)
-                        .padding(.vertical, 8)
+                    NavigationLink(destination: VideoPlayerView(videoSelected: item.id, videoTitle: item.name)) {
+                        VideoListItemView(video: item)
+                            .padding(.vertical, 8)
+                    }
                 } //: LOOP
             } //: LIST
             .listStyle(InsetGroupedListStyle())
@@ -27,7 +31,9 @@ struct VideoListView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
-                        //: SHUFFLE VIDEOS
+                        // SHUFFLE VIDEOS
+                        videos.shuffle()
+                        hapticImpact.impactOccurred()
                     }) {
                         Image(systemName: "arrow.2.squarepath")
                     }
