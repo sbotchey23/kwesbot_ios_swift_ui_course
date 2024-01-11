@@ -10,10 +10,25 @@ import SwiftUI
 struct MotionAnimationView: View {
     // MARK: - PROPERTIES
     
+    @State private var randomCir
+    
     // MARK: - BODY
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geometry in
+            ZStack {
+                Circle()
+                    .foregroundColor(.gray)
+                    .opacity(0.15)
+                    .frame(width: 256, height: 256, alignment: .center)
+                    .position(
+                        x: geometry.size.width / 2,
+                        y: geometry.size.height / 2
+                    )
+                
+                Text("Width: \(Int(geometry.size.width)) Height: \(Int(geometry.size.height))")
+            } //: ZSTACK
+        } //: GEROMETRY
     }
 }
 
