@@ -10,7 +10,7 @@ import SwiftUI
 struct MapAnnotationView: View {
     // MARK: - PROPERTIES
     
-    var location: NationalParkLocation
+    let location: NationalParkLocation
     @State private var animation: Double = 0.0
     
     // MARK: - BODY
@@ -44,7 +44,7 @@ struct MapAnnotationView: View {
 // MARK: - PREVIEW
 
 #Preview(traits: .sizeThatFitsLayout){
-    var locations: [NationalParkLocation] = Bundle.main.decode("locations.json")
+    let locations: [NationalParkLocation] = Bundle.main.decode("locations.json")
 
     return MapAnnotationView(location: locations[0])
         .padding()
