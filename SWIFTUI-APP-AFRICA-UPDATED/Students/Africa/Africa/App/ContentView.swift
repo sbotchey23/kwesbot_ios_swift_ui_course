@@ -38,7 +38,7 @@ struct ContentView: View {
     
     // MARK: - BODY
     var body: some View {
-        NavigationStack {
+        NavigationView {
             Group {
                 if !isGridViewActive {
                     List {
@@ -51,6 +51,8 @@ struct ContentView: View {
                                 AnimalListItemView(animal: animal)
                             } //: NAVIGATIONLINK
                         } //: LOOP
+                        CreditsView()
+                            .modifier(CenterModifier())
                     } //: LIST
                 } else {
                     ScrollView(.vertical, showsIndicators: false) {
