@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB850F0A2B6A26C600076A33 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB850F092B6A26C600076A33 /* PlayerModel.swift */; };
+		BB850F0C2B6A27A500076A33 /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB850F0B2B6A27A500076A33 /* CodableBundleExtension.swift */; };
 		C510C67A2B63FF6A0065BD84 /* TouchdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C510C6792B63FF6A0065BD84 /* TouchdownApp.swift */; };
 		C510C67C2B63FF6A0065BD84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C510C67B2B63FF6A0065BD84 /* ContentView.swift */; };
 		C510C67E2B63FF6C0065BD84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C510C67D2B63FF6C0065BD84 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB850F092B6A26C600076A33 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = SOURCE_ROOT; };
+		BB850F0B2B6A27A500076A33 /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = SOURCE_ROOT; };
 		C510C6762B63FF6A0065BD84 /* Touchdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touchdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C510C6792B63FF6A0065BD84 /* TouchdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchdownApp.swift; sourceTree = "<group>"; };
 		C510C67B2B63FF6A0065BD84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		C5D0A6C02B640F6200A41849 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BB850F092B6A26C600076A33 /* PlayerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 		C5D0A6C12B640F7500A41849 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				BB850F0B2B6A27A500076A33 /* CodableBundleExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -231,12 +237,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB850F0C2B6A27A500076A33 /* CodableBundleExtension.swift in Sources */,
 				C510C67C2B63FF6A0065BD84 /* ContentView.swift in Sources */,
 				C5D0A6CA2B678E0900A41849 /* LogoView.swift in Sources */,
 				C5D0A6C62B6414FC00A41849 /* FooterView.swift in Sources */,
 				C510C67A2B63FF6A0065BD84 /* TouchdownApp.swift in Sources */,
 				C5D0A6C42B64134E00A41849 /* Constant.swift in Sources */,
 				C5D0A6C82B67821500A41849 /* NavigationBarView.swift in Sources */,
+				BB850F0A2B6A26C600076A33 /* PlayerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

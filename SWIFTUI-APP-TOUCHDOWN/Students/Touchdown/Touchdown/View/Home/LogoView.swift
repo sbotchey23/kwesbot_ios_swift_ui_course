@@ -18,9 +18,12 @@ struct LogoView: View {
                 .fontWeight(.black)
                 .foregroundColor(.black)
             
-            Image("logo-black")
+            Image("logo-dark")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 30, height: 30, alignment: .center)
             
-            Text("Touch".uppercased())
+            Text("Down".uppercased())
                 .font(.title3)
                 .fontWeight(.black)
                 .foregroundColor(.black)
