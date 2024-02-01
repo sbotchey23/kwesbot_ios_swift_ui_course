@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB4AF2502B6B70F5003FB8BB /* FeaturedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4AF24F2B6B70F5003FB8BB /* FeaturedItemView.swift */; };
+		BB4AF2522B6B7569003FB8BB /* FeaturedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4AF2512B6B7569003FB8BB /* FeaturedTabView.swift */; };
 		BB850F0A2B6A26C600076A33 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB850F092B6A26C600076A33 /* PlayerModel.swift */; };
 		BB850F0C2B6A27A500076A33 /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB850F0B2B6A27A500076A33 /* CodableBundleExtension.swift */; };
 		C510C67A2B63FF6A0065BD84 /* TouchdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C510C6792B63FF6A0065BD84 /* TouchdownApp.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		BB4AF24F2B6B70F5003FB8BB /* FeaturedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemView.swift; sourceTree = "<group>"; };
+		BB4AF2512B6B7569003FB8BB /* FeaturedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedTabView.swift; sourceTree = "<group>"; };
 		BB850F092B6A26C600076A33 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = SOURCE_ROOT; };
 		BB850F0B2B6A27A500076A33 /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = SOURCE_ROOT; };
 		C510C6762B63FF6A0065BD84 /* Touchdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touchdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 				C5D0A6C72B67821500A41849 /* NavigationBarView.swift */,
 				C5D0A6C92B678E0900A41849 /* LogoView.swift */,
 				BB4AF24F2B6B70F5003FB8BB /* FeaturedItemView.swift */,
+				BB4AF2512B6B7569003FB8BB /* FeaturedTabView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				C510C67A2B63FF6A0065BD84 /* TouchdownApp.swift in Sources */,
 				C5D0A6C42B64134E00A41849 /* Constant.swift in Sources */,
 				C5D0A6C82B67821500A41849 /* NavigationBarView.swift in Sources */,
+				BB4AF2522B6B7569003FB8BB /* FeaturedTabView.swift in Sources */,
 				BB850F0A2B6A26C600076A33 /* PlayerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
