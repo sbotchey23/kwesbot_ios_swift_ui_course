@@ -1,0 +1,22 @@
+//
+//  HeaderDetailView.swift
+//  Touchdown
+//
+//  Created by Stephen Kwesi Botchey on 08/02/2024.
+//
+
+import SwiftUI
+
+struct HeaderDetailView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+// MARK: - PREVIEW
+#Preview {
+    HeaderDetailView()
+}
