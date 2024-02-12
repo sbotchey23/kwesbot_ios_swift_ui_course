@@ -39,14 +39,17 @@ struct ProductDetailView: View {
                     Text(sampleProduct.description)
                         .font(.system(.body, design: .rounded))
                         .foregroundColor(.gray)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                        .multilineTextAlignment(.leading)
                 }) //: SCROLLVIEW
                 
                 // QUANTITY + FAVORITE
+                QuantityFavoriteDetailView()
+                    .padding(.vertical, 10)
                 
                 // ADD TO CART
                 
-                Spacer()
+                AddToCartDetailView()
+                    .padding(.bottom, 20)
             })//: VSTACK
             .padding(.horizontal)
             .background(
