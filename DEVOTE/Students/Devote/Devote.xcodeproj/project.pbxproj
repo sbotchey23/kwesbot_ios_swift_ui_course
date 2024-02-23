@@ -13,6 +13,7 @@
 		BBE054502B80748000C4C60A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE0544F2B80748000C4C60A /* Preview Assets.xcassets */; };
 		BBE054522B80748000C4C60A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE054512B80748000C4C60A /* Persistence.swift */; };
 		BBE054552B80748000C4C60A /* Devote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBE054532B80748000C4C60A /* Devote.xcdatamodeld */; };
+		BBEF0C0A2B887BE400D34845 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEF0C092B887BE400D34845 /* Constant.swift */; };
 		C58110F52B8223DA00C3BA33 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C58110F42B8223D900C3BA33 /* sound-rise.mp3 */; };
 		C58110F92B82240400C3BA33 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C58110F62B82240400C3BA33 /* sound-ding.mp3 */; };
 		C58110FB2B82240400C3BA33 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C58110F82B82240400C3BA33 /* sound-tap.mp3 */; };
@@ -26,6 +27,7 @@
 		BBE0544F2B80748000C4C60A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BBE054512B80748000C4C60A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BBE054542B80748000C4C60A /* Devote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Devote.xcdatamodel; sourceTree = "<group>"; };
+		BBEF0C092B887BE400D34845 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C58110F42B8223D900C3BA33 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
 		C58110F62B82240400C3BA33 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
 		C58110F82B82240400C3BA33 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
@@ -63,15 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				C58111022B8348E400C3BA33 /* Info.plist */,
+				BBE0544C2B80748000C4C60A /* Assets.xcassets */,
+				BBE054482B80747C00C4C60A /* DevoteApp.swift */,
 				C58110FD2B82250E00C3BA33 /* View */,
 				C58111012B8225F500C3BA33 /* Model */,
 				C58110FC2B8224EC00C3BA33 /* Sound */,
-				C58111002B82257100C3BA33 /* Style */,
-				C58110FF2B82255C00C3BA33 /* Extension */,
-				C58110FE2B82254F00C3BA33 /* Utility */,
-				BBE054482B80747C00C4C60A /* DevoteApp.swift */,
-				BBE0544C2B80748000C4C60A /* Assets.xcassets */,
 				BBE0544E2B80748000C4C60A /* Preview Content */,
+				BBEF0C0B2B887BF000D34845 /* Utility */,
 			);
 			path = Devote;
 			sourceTree = "<group>";
@@ -82,6 +82,14 @@
 				BBE0544F2B80748000C4C60A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BBEF0C0B2B887BF000D34845 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BBEF0C092B887BE400D34845 /* Constant.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		C58110FC2B8224EC00C3BA33 /* Sound */ = {
@@ -100,27 +108,6 @@
 				BBE0544A2B80747C00C4C60A /* ContentView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		C58110FE2B82254F00C3BA33 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		C58110FF2B82255C00C3BA33 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		C58111002B82257100C3BA33 /* Style */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Style;
 			sourceTree = "<group>";
 		};
 		C58111012B8225F500C3BA33 /* Model */ = {
@@ -207,6 +194,7 @@
 			files = (
 				BBE054522B80748000C4C60A /* Persistence.swift in Sources */,
 				BBE0544B2B80747C00C4C60A /* ContentView.swift in Sources */,
+				BBEF0C0A2B887BE400D34845 /* Constant.swift in Sources */,
 				BBE054552B80748000C4C60A /* Devote.xcdatamodeld in Sources */,
 				BBE054492B80747C00C4C60A /* DevoteApp.swift in Sources */,
 			);
