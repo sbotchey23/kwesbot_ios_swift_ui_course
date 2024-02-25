@@ -10,9 +10,15 @@ import CoreData
 
 struct ContentView: View {
     // MARK: - PROPERTY
-    @Environment(\.managedObjectContext) private var viewContext
+    @State var task: String = ""
+    
+    private var isButtonDisabled: Bool {
+        task.isEmpty
+    }
 
     // MARK: - FETCHING DATA
+    @Environment(\.managedObjectContext) private var viewContext
+    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
@@ -23,6 +29,9 @@ struct ContentView: View {
         withAnimation {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
+            newItem.task = task.capitalized
+            newItem.completion = false
+            newItem.id = UUID()
 
             do {
                 try viewContext.save()
@@ -30,6 +39,8 @@ struct ContentView: View {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
+            task = ""
+            hideKeyboard()
         }
     }
 
@@ -49,28 +60,62 @@ struct ContentView: View {
     // MARK: - BODY
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            } //:LIST
+            ZStack {
+                VStack {
+                    VStack(spacing: 16){
+                        TextField("New Task", text: $task)
+                            .padding()
+                            .background(Color(UIColor.systemGray6))
+                            .cornerRadius(10)
+                        
+                        Button(action: {
+                            addItem()
+                        }, label: {
+                            Spacer()
+                            Text("Save".uppercased())
+                            Spacer()
+                        })
+                        .disabled(isButtonDisabled)
+                        .padding()
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .background(isButtonDisabled ?  Color.gray : Color.pink)
+                        .cornerRadius(10)
+                    } //: VSTACK
+                    .padding()
+                    
+                    List {
+                        ForEach(items) { item in
+                            VStack(alignment: .leading) {
+                                Text(item.task ?? "")
+                                    .font(.headline)
+                                    .fontWeight(.bold)
+                                
+                                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                                .font(.footnote)
+                                .foregroundColor(.gray)
+                            } //: VSTACK LIST ITEM
+                        } //: LOOP
+                        .onDelete(perform: deleteItems)
+                    } //:LIST
+                    .listStyle(InsetGroupedListStyle())
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.4), radius: 12)
+                    .scrollContentBackground(.hidden)
+                    .padding(.vertical, 0)
+                    .frame(maxWidth: 640)
+                } //: VSTACK
+            } //: ZSTACK
+            .navigationTitle("Daily Tasks")
+            .navigationBarTitleDisplayMode(.large)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .topBarTrailing) {
                     EditButton()
                 }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
             } //: TOOLBAR
-            Text("Select an item")
+            .background(BackgroundImageView())
+            .background(backgroundGradient.ignoresSafeArea(.all))
         } //: NAVIGATIONVIEW
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
