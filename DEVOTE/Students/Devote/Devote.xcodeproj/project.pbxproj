@@ -17,6 +17,10 @@
 		C58110F52B8223DA00C3BA33 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C58110F42B8223D900C3BA33 /* sound-rise.mp3 */; };
 		C58110F92B82240400C3BA33 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C58110F62B82240400C3BA33 /* sound-ding.mp3 */; };
 		C58110FB2B82240400C3BA33 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C58110F82B82240400C3BA33 /* sound-tap.mp3 */; };
+		C58111042B8A769700C3BA33 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58111032B8A769600C3BA33 /* HideKeyboardExtension.swift */; };
+		C58111072B8AD9B100C3BA33 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58111062B8AD9B100C3BA33 /* BackgroundImageView.swift */; };
+		C58111092B8C5F8A00C3BA33 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58111082B8C5F8A00C3BA33 /* NewTaskItemView.swift */; };
+		C581110B2B8F0F8800C3BA33 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581110A2B8F0F8800C3BA33 /* BlankView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		C58110F62B82240400C3BA33 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
 		C58110F82B82240400C3BA33 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
 		C58111022B8348E400C3BA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C58111032B8A769600C3BA33 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
+		C58111062B8AD9B100C3BA33 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		C58111082B8C5F8A00C3BA33 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
+		C581110A2B8F0F8800C3BA33 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 				C58110FC2B8224EC00C3BA33 /* Sound */,
 				BBE0544E2B80748000C4C60A /* Preview Content */,
 				BBEF0C0B2B887BF000D34845 /* Utility */,
+				C58111052B8A76B600C3BA33 /* Extension */,
 			);
 			path = Devote;
 			sourceTree = "<group>";
@@ -106,6 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				BBE0544A2B80747C00C4C60A /* ContentView.swift */,
+				C58111062B8AD9B100C3BA33 /* BackgroundImageView.swift */,
+				C58111082B8C5F8A00C3BA33 /* NewTaskItemView.swift */,
+				C581110A2B8F0F8800C3BA33 /* BlankView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +129,14 @@
 				BBE054532B80748000C4C60A /* Devote.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C58111052B8A76B600C3BA33 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C58111032B8A769600C3BA33 /* HideKeyboardExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,10 +213,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBE054522B80748000C4C60A /* Persistence.swift in Sources */,
+				C58111072B8AD9B100C3BA33 /* BackgroundImageView.swift in Sources */,
 				BBE0544B2B80747C00C4C60A /* ContentView.swift in Sources */,
+				C58111042B8A769700C3BA33 /* HideKeyboardExtension.swift in Sources */,
+				C581110B2B8F0F8800C3BA33 /* BlankView.swift in Sources */,
 				BBEF0C0A2B887BE400D34845 /* Constant.swift in Sources */,
 				BBE054552B80748000C4C60A /* Devote.xcdatamodeld in Sources */,
 				BBE054492B80747C00C4C60A /* DevoteApp.swift in Sources */,
+				C58111092B8C5F8A00C3BA33 /* NewTaskItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
