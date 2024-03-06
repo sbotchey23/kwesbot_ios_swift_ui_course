@@ -9,8 +9,11 @@ import SwiftUI
 
 struct NewTaskItemView: View {
     // MARK: - PROPERTIES
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     @Environment(\.managedObjectContext) private var viewContext
     @State var task: String = ""
+    @Binding var isShowing: Bool
+    @FocusState private var taskIsFocussed: Bool
     
     private var isButtonDisabled: Bool {
         task.isEmpty
@@ -33,6 +36,7 @@ struct NewTaskItemView: View {
             }
             task = ""
             hideKeyboard()
+            isShowing = false
         }
     }
     
@@ -44,10 +48,18 @@ struct NewTaskItemView: View {
             
             VStack(spacing: 16){
                 TextField("New Task", text: $task)
+                    .focused($taskIsFocussed)
+                    .onSubmit {
+                        if !isButtonDisabled {
+                            addItem()
+                        }
+                    }
                     .foregroundColor(.pink)
                     .font(.system(size: 24, weight: .bold, design: .rounded))
                     .padding()
-                    .background(Color(UIColor.systemGray6))
+                    .background(
+                        isDarkMode ? Color(UIColor.tertiarySystemBackground) : Color(UIColor.secondarySystemBackground)
+                    )
                     .cornerRadius(10)
                 
                 Button(action: {
@@ -66,17 +78,21 @@ struct NewTaskItemView: View {
             } //: VSTACK
             .padding(.horizontal)
             .padding(.vertical, 20)
-            .background(Color.white)
+            .background(isDarkMode ? Color(UIColor.secondarySystemBackground) : Color.white
+            )
             .cornerRadius(16)
             .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.65), radius: 24)
             .frame(maxWidth: 640)
         } //: VSTACK
         .padding()
+        .onAppear() {
+            taskIsFocussed = true
+         }
     }
 }
 
 // MARK: - PREVIEW
 #Preview {
-    NewTaskItemView()
+    NewTaskItemView(isShowing: .constant(true))
         .background(Color.gray.ignoresSafeArea(.all))
 }

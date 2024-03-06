@@ -10,6 +10,7 @@ import CoreData
 
 struct ContentView: View {
     // MARK: - PROPERTIES
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     @State var task: String = ""
     @State private var showNewTaskItem: Bool = false
     
@@ -43,6 +44,37 @@ struct ContentView: View {
                 // MARK: - MAIN VIEW
                 VStack {
                     // MARK: - HEADER
+                    HStack(spacing:10) {
+                        // TITLE
+                        Text("Devote")
+                            .font(.system(.largeTitle, design: .rounded))
+                            .fontWeight(.heavy)
+                            .padding(.leading, 4)
+                        
+                        Spacer()
+                        
+                        // EDIT BUTTON
+                        EditButton()
+                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .padding(.horizontal, 10)
+                            .frame(minWidth: 70, minHeight: 24)
+                            .background(Capsule().stroke(Color.white, lineWidth: 2))
+                        
+                        // APPEARANCE BUTTON
+                        Button(action: {
+                            // TOGGLE APPEARANCE
+                            isDarkMode.toggle()
+                        }, label: {
+                            Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .font(.system(.title, design: .rounded))
+                        })
+                        
+                    } //: HSTACK
+                    .padding()
+                    .foregroundStyle(.white)
+                    
                     Spacer(minLength: 80)
                     
                     // MARK: - NEW TASK BUTTON
@@ -63,15 +95,7 @@ struct ContentView: View {
                     // MARK: - TASKS
                     List {
                         ForEach(items) { item in
-                            VStack(alignment: .leading) {
-                                Text(item.task ?? "")
-                                    .font(.headline)
-                                    .fontWeight(.bold)
-                                
-                                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                                .font(.footnote)
-                                .foregroundColor(.gray)
-                            } //: VSTACK LIST ITEM
+                          ListRowItemView(item: item)
                         } //: LOOP
                         .onDelete(perform: deleteItems)
                     } //:LIST
@@ -90,17 +114,18 @@ struct ContentView: View {
                                 showNewTaskItem = false
                             }
                         }
-                    NewTaskItemView()
+                    NewTaskItemView(isShowing: $showNewTaskItem)
                 }
                 
             } //: ZSTACK
             .navigationTitle("Daily Tasks")
             .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    EditButton()
-                }
-            } //: TOOLBAR
+            .navigationBarHidden(true)
+            //.toolbar {
+            //  ToolbarItem(placement: .topBarTrailing) {
+           //         EditButton()
+            //    }
+            //} //: TOOLBAR
             .background(BackgroundImageView())
             .background(backgroundGradient.ignoresSafeArea(.all))
         } //: NAVIGATIONVIEW
