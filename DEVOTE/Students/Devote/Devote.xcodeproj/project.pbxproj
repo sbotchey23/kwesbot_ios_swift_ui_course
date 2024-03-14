@@ -31,6 +31,8 @@
 		C581110B2B8F0F8800C3BA33 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581110A2B8F0F8800C3BA33 /* BlankView.swift */; };
 		C581110F2B981BDD00C3BA33 /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581110E2B981BDD00C3BA33 /* ListRowItemView.swift */; };
 		C58111122B98281800C3BA33 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58111112B98281800C3BA33 /* CheckboxStyle.swift */; };
+		C5E21AA82BA3613400F7D8BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE0544C2B80748000C4C60A /* Assets.xcassets */; };
+		C5E21AA92BA3690200F7D8BB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEF0C092B887BE400D34845 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -321,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5E21AA82BA3613400F7D8BB /* Assets.xcassets in Resources */,
 				C56618EF2BA31FA600736914 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +357,7 @@
 				C56618ED2BA31FA400736914 /* DevoteWidget.swift in Sources */,
 				C56618E92BA31FA400736914 /* DevoteWidgetBundle.swift in Sources */,
 				C56618EB2BA31FA400736914 /* DevoteWidgetLiveActivity.swift in Sources */,
+				C5E21AA92BA3690200F7D8BB /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
