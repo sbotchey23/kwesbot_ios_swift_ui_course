@@ -12,9 +12,44 @@ struct ContentView: View {
     @State private var notes: [Note] = [Note]()
     @State private var text: String = ""
     
-    // MARK: - FUNCTION
+    // MARK: - FUNCTIONS
+    func getDocumentDirectory() -> URL {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return path[0]
+    }
+    
     func save() {
-        dump(notes)
+        //dump(notes)
+        
+        do {
+            // 1. Convert the notes array to data using JSONEncoder
+            let data = try JSONEncoder().encode(notes)
+            
+            // 2. Create a new URL to save the file using the getDocumentDirectory
+            let url = getDocumentDirectory().appendingPathComponent("notes")
+            
+            // 3. Write the data to the given URL
+            try data.write(to: url)
+            
+        } catch {
+            print("Saving data has failed!")
+        }
+    }
+    
+    func load() {
+        do {
+            // 1. Get the notes url path
+            let url = getDocumentDirectory().appendingPathComponent("notes")
+            
+            // 2. Create a new property for the data
+            let data = try Data(contentsOf: url)
+            
+            // 3. Decode the data
+            notes = try JSONDecoder().decode([Note].self, from: data)
+            
+        } catch {
+            // Do nothing
+        }
     }
     
     // MARK: - BODY
