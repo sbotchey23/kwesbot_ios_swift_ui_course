@@ -37,18 +37,27 @@ struct ContentView: View {
     }
     
     func load() {
-        do {
-            // 1. Get the notes url path
-            let url = getDocumentDirectory().appendingPathComponent("notes")
-            
-            // 2. Create a new property for the data
-            let data = try Data(contentsOf: url)
-            
-            // 3. Decode the data
-            notes = try JSONDecoder().decode([Note].self, from: data)
-            
-        } catch {
-            // Do nothing
+        DispatchQueue.main.async {
+            do {
+                // 1. Get the notes url path
+                let url = getDocumentDirectory().appendingPathComponent("notes")
+                
+                // 2. Create a new property for the data
+                let data = try Data(contentsOf: url)
+                
+                // 3. Decode the data
+                notes = try JSONDecoder().decode([Note].self, from: data)
+                
+            } catch {
+                // Do nothing
+            }
+        }
+    }
+    
+    func delete(offsets: IndexSet) {
+        withAnimation {
+            notes.remove(atOffsets: offsets)
+            save()
         }
     }
     
@@ -89,11 +98,44 @@ struct ContentView: View {
                 } //: HSTACK
                 Spacer()
                 
-                Text("No. of notes = \(notes.count)")
+                if notes.count >= 1 {
+                    List {
+                        ForEach(0..<notes.count, id: \.self) { i in
+                            NavigationLink(destination: DetailView(note: notes[i], count: notes.count, index: i)) {
+                                HStack {
+                                    Capsule()
+                                        .frame(width: 4)
+                                        .foregroundStyle(.accent)
+                                    Text(notes[i].text)
+                                        .lineLimit(1)
+                                        .font(.footnote)
+                                        .fontWeight(.light)
+                                        .padding(.leading, 5)
+                                } //: HSTACK
+                            }
+                        } //: LOOP
+                        .onDelete(perform: delete)
+                    }
+                } else {
+                    Spacer()
+                    Image(systemName: "note.text.badge.plus")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundStyle(.gray)
+                        .opacity(0.25)
+                        .padding(25)
+                    Spacer()
+                } //: LIST
+                
+                Text("")
             } //: VSTACK
-            .navigationTitle("Notes")
+            .navigationTitle("Notes: \(notes.count)")
+            .onAppear(perform: {
+                load()
+            })
         } //: NAVIGATIONSTACK
     }
+    
 }
 
 // MARK: - PREVIEW
