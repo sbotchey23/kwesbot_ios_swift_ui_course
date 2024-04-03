@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C5469B982BB70A6D00A5BB79 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5469B972BB70A6C00A5BB79 /* DetailView.swift */; };
+		C5469B9A2BBAD0D200A5BB79 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5469B992BBAD0D200A5BB79 /* CreditsView.swift */; };
+		C5469B9C2BBADB4800A5BB79 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5469B9B2BBADB4800A5BB79 /* HeaderView.swift */; };
+		C5469B9F2BBBB77B00A5BB79 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5469B9E2BBBB77B00A5BB79 /* SettingsView.swift */; };
 		C5E21AB82BADF9E900F7D8BB /* Notes Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C5E21AB72BADF9E900F7D8BB /* Notes Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C5E21ABD2BADF9E900F7D8BB /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E21ABC2BADF9E900F7D8BB /* NotesApp.swift */; };
 		C5E21ABF2BADF9E900F7D8BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E21ABE2BADF9E900F7D8BB /* ContentView.swift */; };
@@ -42,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		C5469B972BB70A6C00A5BB79 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C5469B992BBAD0D200A5BB79 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		C5469B9B2BBADB4800A5BB79 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		C5469B9E2BBBB77B00A5BB79 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C5E21AB12BADF9E900F7D8BB /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E21AB72BADF9E900F7D8BB /* Notes Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notes Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E21ABC2BADF9E900F7D8BB /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
@@ -62,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C5469B9D2BBADBA400A5BB79 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				C5469B9B2BBADB4800A5BB79 /* HeaderView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		C5E21AAA2BADF9E800F7D8BB = {
 			isa = PBXGroup;
 			children = (
@@ -84,8 +98,9 @@
 			children = (
 				C5E21ABC2BADF9E900F7D8BB /* NotesApp.swift */,
 				C5E21ACE2BADFED900F7D8BB /* View */,
-				C5E21AC02BADF9EB00F7D8BB /* Assets.xcassets */,
+				C5469B9D2BBADBA400A5BB79 /* Component */,
 				C5E21AD12BADFF3800F7D8BB /* Model */,
+				C5E21AC02BADF9EB00F7D8BB /* Assets.xcassets */,
 				C5E21AC22BADF9EB00F7D8BB /* Preview Content */,
 			);
 			path = "Notes Watch App";
@@ -104,6 +119,8 @@
 			children = (
 				C5E21ABE2BADF9E900F7D8BB /* ContentView.swift */,
 				C5469B972BB70A6C00A5BB79 /* DetailView.swift */,
+				C5469B992BBAD0D200A5BB79 /* CreditsView.swift */,
+				C5469B9E2BBBB77B00A5BB79 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,9 +231,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5469B9F2BBBB77B00A5BB79 /* SettingsView.swift in Sources */,
 				C5E21ABF2BADF9E900F7D8BB /* ContentView.swift in Sources */,
+				C5469B9C2BBADB4800A5BB79 /* HeaderView.swift in Sources */,
 				C5469B982BB70A6D00A5BB79 /* DetailView.swift in Sources */,
 				C5E21ABD2BADF9E900F7D8BB /* NotesApp.swift in Sources */,
+				C5469B9A2BBAD0D200A5BB79 /* CreditsView.swift in Sources */,
 				C5E21AD02BADFF2400F7D8BB /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
