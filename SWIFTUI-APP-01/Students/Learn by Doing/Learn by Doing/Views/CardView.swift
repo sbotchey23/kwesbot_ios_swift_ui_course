@@ -33,10 +33,21 @@ struct CardView: View {
             Button(action: {
                 print("Button was tapped!")
             }, label: {
-                Text("Learn".uppercased())
-                    .fontWeight(.heavy)
-                    .foregroundStyle(Color.white)
+                HStack {
+                    Text("Learn".uppercased())
+                        .fontWeight(.heavy)
+                        .foregroundStyle(Color.white)
                     .tint(Color.white)
+                    
+                    Image(systemName: "arrow.right.circle")
+                        .font(Font.title.weight(.medium))
+                        .tint(Color.white)
+                } //: HSTACK
+                .padding(.vertical, 10)
+                .padding(.horizontal, 35)
+                .background(LinearGradient(gradient: Gradient(colors: gradient), startPoint: .leading, endPoint: .trailing))
+                .clipShape(Capsule())
+                .shadow(color: Color("ClorShadow"), radius: 6, x: 0, y: 3)
             }) //: BUTTON
             .offset(y: 210)
         }
