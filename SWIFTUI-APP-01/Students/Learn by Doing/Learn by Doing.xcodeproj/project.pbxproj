@@ -62,10 +62,10 @@
 				BB0C38812BBF12B50026A546 /* Learn_by_DoingApp.swift */,
 				BB0C38912BBF24440026A546 /* Views */,
 				BB0C388F2BBF19900026A546 /* LaunchScreen.storyboard */,
-				BB0C38852BBF12B80026A546 /* Assets.xcassets */,
-				BB0C38872BBF12B80026A546 /* Preview Content */,
 				C5469BA02BC31C5600A5BB79 /* CardModel.swift */,
 				C5469BA22BC31F0E00A5BB79 /* CardData.swift */,
+				BB0C38852BBF12B80026A546 /* Assets.xcassets */,
+				BB0C38872BBF12B80026A546 /* Preview Content */,
 			);
 			path = "Learn by Doing";
 			sourceTree = "<group>";

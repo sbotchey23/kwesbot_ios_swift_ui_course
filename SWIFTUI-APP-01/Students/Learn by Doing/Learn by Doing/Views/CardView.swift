@@ -9,21 +9,21 @@ import SwiftUI
 
 struct CardView: View {
     // MARK: - PROPERTIES
-    var gradient: [Color] = [Color("Color01"), Color("Color02")]
-    
+    var card: Card
+        
     // MARK: - BODY
     var body: some View {
         ZStack {
-            Image("developer-no1")
+            Image(card.imageName)
             
             VStack {
-                Text("SwiftUI")
+                Text(card.title)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                     .foregroundStyle(Color.white)
                     .multilineTextAlignment(.center)
                 
-                Text("Better apps. Less code.")
+                Text(card.headline)
                     .fontWeight(.light)
                     .foregroundStyle(Color.white)
                     .italic()
@@ -34,7 +34,7 @@ struct CardView: View {
                 print("Button was tapped!")
             }, label: {
                 HStack {
-                    Text("Learn".uppercased())
+                    Text(card.callToAction.uppercased())
                         .fontWeight(.heavy)
                         .foregroundStyle(Color.white)
                     .tint(Color.white)
@@ -45,14 +45,14 @@ struct CardView: View {
                 } //: HSTACK
                 .padding(.vertical, 10)
                 .padding(.horizontal, 35)
-                .background(LinearGradient(gradient: Gradient(colors: gradient), startPoint: .leading, endPoint: .trailing))
+                .background(LinearGradient(gradient: Gradient(colors: card.gradientColors), startPoint: .leading, endPoint: .trailing))
                 .clipShape(Capsule())
                 .shadow(color: Color("ClorShadow"), radius: 6, x: 0, y: 3)
             }) //: BUTTON
             .offset(y: 210)
         }
         .frame(width: 335, height: 545)
-        .background(LinearGradient(gradient: Gradient(colors: gradient), startPoint: .top, endPoint: .bottom))
+        .background(LinearGradient(gradient: Gradient(colors: card.gradientColors), startPoint: .top, endPoint: .bottom))
         .cornerRadius(16)
         .shadow(radius: 8)
     }
@@ -60,5 +60,5 @@ struct CardView: View {
 
 // MARK: - PREVIEW
 #Preview(traits: .sizeThatFitsLayout) {
-    CardView()
+    return CardView(card: cardData[2])
 }
