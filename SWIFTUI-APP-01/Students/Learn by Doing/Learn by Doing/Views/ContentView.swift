@@ -21,7 +21,6 @@ struct ContentView: View {
             } //: HSTACK
             .padding(25)
         } //: SCROLL
-        
     }
 }
 
