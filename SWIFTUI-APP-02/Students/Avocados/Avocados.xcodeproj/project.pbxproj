@@ -11,6 +11,7 @@
 		BB0C38A32BD0407D0026A546 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C38A22BD0407D0026A546 /* ContentView.swift */; };
 		BB0C38A52BD040800026A546 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0C38A42BD040800026A546 /* Assets.xcassets */; };
 		BB0C38A82BD040800026A546 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0C38A72BD040800026A546 /* Preview Assets.xcassets */; };
+		BB0C38C52BD2EE7B0026A546 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0C38C42BD2EE7B0026A546 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		BB0C38A22BD0407D0026A546 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB0C38A42BD040800026A546 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB0C38A72BD040800026A546 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB0C38C42BD2EE7B0026A546 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				BB0C38A02BD0407D0026A546 /* AvocadosApp.swift */,
 				BB0C38A22BD0407D0026A546 /* ContentView.swift */,
+				BB0C38C42BD2EE7B0026A546 /* LaunchScreen.storyboard */,
 				BB0C38A42BD040800026A546 /* Assets.xcassets */,
 				BB0C38A62BD040800026A546 /* Preview Content */,
 			);
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB0C38C52BD2EE7B0026A546 /* LaunchScreen.storyboard in Resources */,
 				BB0C38A82BD040800026A546 /* Preview Assets.xcassets in Resources */,
 				BB0C38A52BD040800026A546 /* Assets.xcassets in Resources */,
 			);
