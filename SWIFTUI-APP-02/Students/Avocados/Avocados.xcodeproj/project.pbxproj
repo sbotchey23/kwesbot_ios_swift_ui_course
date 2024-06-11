@@ -11,7 +11,6 @@
 		BB0C38A32BD0407D0026A546 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C38A22BD0407D0026A546 /* ContentView.swift */; };
 		BB0C38A52BD040800026A546 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0C38A42BD040800026A546 /* Assets.xcassets */; };
 		BB0C38A82BD040800026A546 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0C38A72BD040800026A546 /* Preview Assets.xcassets */; };
-		BB0C38C52BD2EE7B0026A546 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0C38C42BD2EE7B0026A546 /* LaunchScreen.storyboard */; };
 		C5C3FF9E2C07000C0094EA77 /* AvocadosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C3FF9D2C07000C0094EA77 /* AvocadosView.swift */; };
 		C5C3FFA02C0700550094EA77 /* RipeningStagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C3FF9F2C0700550094EA77 /* RipeningStagesView.swift */; };
 		C5C3FFA22C0700E40094EA77 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C3FFA12C0700E40094EA77 /* SettingsView.swift */; };
@@ -24,11 +23,11 @@
 		BB0C38A22BD0407D0026A546 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB0C38A42BD040800026A546 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB0C38A72BD040800026A546 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BB0C38C42BD2EE7B0026A546 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5C3FF9D2C07000C0094EA77 /* AvocadosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadosView.swift; sourceTree = "<group>"; };
 		C5C3FF9F2C0700550094EA77 /* RipeningStagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningStagesView.swift; sourceTree = "<group>"; };
 		C5C3FFA12C0700E40094EA77 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C5C3FFA72C0702EB0094EA77 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		C5C3FFA92C13F1720094EA77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +60,8 @@
 		BB0C389F2BD0407D0026A546 /* Avocados */ = {
 			isa = PBXGroup;
 			children = (
+				C5C3FFA92C13F1720094EA77 /* Info.plist */,
 				BB0C38A02BD0407D0026A546 /* AvocadosApp.swift */,
-				BB0C38C42BD2EE7B0026A546 /* LaunchScreen.storyboard */,
 				C5C3FF9C2C06FF5F0094EA77 /* View */,
 				BB0C38A42BD040800026A546 /* Assets.xcassets */,
 				BB0C38A62BD040800026A546 /* Preview Content */,
@@ -148,7 +147,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB0C38C52BD2EE7B0026A546 /* LaunchScreen.storyboard in Resources */,
 				BB0C38A82BD040800026A546 /* Preview Assets.xcassets in Resources */,
 				BB0C38A52BD040800026A546 /* Assets.xcassets in Resources */,
 			);
@@ -303,9 +301,10 @@
 				DEVELOPMENT_TEAM = 25M8T65BNY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Avocados/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
@@ -333,9 +332,10 @@
 				DEVELOPMENT_TEAM = 25M8T65BNY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Avocados/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
