@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AppView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
     var body: some View {
         TabView {
             AvocadosView()
@@ -37,7 +40,7 @@ struct AppView: View {
         .tint(Color.primary)
     }
 }
-
+// MARK: - PREVIEW
 #Preview {
     AppView()
 }
