@@ -18,6 +18,7 @@ struct AppView: View {
                     Image("tabicon-branch")
                     Text("Avocados")
                 }
+                .toolbarBackground(.visible, for: .tabBar)
             
             ContentView()
                 .tabItem {
@@ -36,8 +37,9 @@ struct AppView: View {
                     Image("tabicon-settings")
                     Text("Settings")
                 }
-            }
+            } //: TABVIEW
         .tint(Color.primary)
+        
     }
 }
 // MARK: - PREVIEW

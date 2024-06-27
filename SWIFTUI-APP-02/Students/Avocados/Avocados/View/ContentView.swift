@@ -26,20 +26,25 @@ struct ContentView: View {
                     } //: HSTACK
                 } //: SCROLLVIEW
                 
+                // MARK: - DISHES
+                Text("Avocado Dishes")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
+                
+                DishesView()
+                    .frame(maxWidth: 640)
                 
                 // MARK: FOOTER
                 
                 VStack(alignment: .center, spacing: 20) {
                     Text("All about avocados".capitalized)
-                        .font(.system(.title, design: .serif))
                         .fontWeight(.bold)
-                        .foregroundStyle(Color("ColorGreenAdaptive"))
-                    .padding(8)
-                    
+                        .modifier(TitleModifier())
                     Text("Everything you wanted to know about avocados but were afraid to ask.")
                         .font(.system(.body, design: .serif))
                         .multilineTextAlignment(.center)
                         .foregroundStyle(Color.gray)
+                        .frame(minHeight: 60)
                 } //: VSTACK
                 .frame(maxWidth: 640)
                 .padding()
@@ -48,6 +53,15 @@ struct ContentView: View {
 
         } //: SCROLLVIEW
         .ignoresSafeArea(.all)
+    }
+}
+
+struct TitleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(.title, design: .serif))
+            .foregroundStyle(Color("ColorGreenAdaptive"))
+            .padding(8)
     }
 }
 // MARK: - PREVIEW
