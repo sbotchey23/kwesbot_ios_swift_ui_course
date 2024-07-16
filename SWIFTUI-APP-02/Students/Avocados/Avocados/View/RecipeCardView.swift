@@ -13,9 +13,8 @@ struct RecipeCardView: View {
     
     // MARK: - BODY
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 0) {
             // CARD IMAGE
-            
             Image(recipe.image)
                 .resizable()
                 .scaledToFit()
@@ -40,9 +39,24 @@ struct RecipeCardView: View {
                 )
             VStack(alignment: .leading, spacing: 12) {
                 //TITLE
+                Text(recipe.title)
+                    .font(.system(.title, design: .serif))
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color("ColorGreenMedium"))
+                    .lineLimit(1)
+                
                 // HEADLINE
-                // RATES
+                Text(recipe.headline)
+                    .font(.system(.body, design: .serif))
+                    .foregroundStyle(Color.gray)
+                    .italic()
+                
+                // RATING
+                RecipeRatingView(recipe: recipe)
+                
                 // COOKING
+               RecipeCookingView(recipe: recipe)
+                
             } //: VSTACK
             .padding()
             .padding(.bottom, 12)
