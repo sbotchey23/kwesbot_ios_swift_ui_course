@@ -24,7 +24,7 @@ struct AvocadosView: View {
                 .shadow(color: Color("ColorBlackTransparentDark"), radius: 12, x: 0, y: 8)
                 .scaleEffect(pulsateAnimation ? 1 : 0.8)
                 .opacity(pulsateAnimation ? 1 : 0.8)
-                .animation(Animation.easeInOut(duration: 1.0).repeatForever(autoreverses: true), value: pulsateAnimation)
+                .animation(Animation.easeInOut(duration: 2.5).repeatForever(autoreverses: true), value: pulsateAnimation)
             
             VStack {
                 Text("Avocados".uppercased())
