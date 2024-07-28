@@ -26,7 +26,6 @@ struct HeaderView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 
-            
             HStack (alignment: .top, spacing: 0){
                 Rectangle()
                     .fill(Color("ColorGreenLight"))
