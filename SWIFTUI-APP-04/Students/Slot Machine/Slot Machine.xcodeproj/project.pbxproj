@@ -19,6 +19,7 @@
 		C506C0C42C8799C500F6162B /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C506C0BC2C8799C500F6162B /* win.mp3 */; };
 		C506C0C52C8799C500F6162B /* high-score.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C506C0BD2C8799C500F6162B /* high-score.mp3 */; };
 		C506C0C62C8799C500F6162B /* background-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C506C0BE2C8799C500F6162B /* background-music.mp3 */; };
+		C5180EB12C87A09E00DEBC08 /* HelperOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5180EB02C87A09E00DEBC08 /* HelperOne.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		C506C0BC2C8799C500F6162B /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 		C506C0BD2C8799C500F6162B /* high-score.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "high-score.mp3"; sourceTree = "<group>"; };
 		C506C0BE2C8799C500F6162B /* background-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music.mp3"; sourceTree = "<group>"; };
+		C5180EB02C87A09E00DEBC08 /* HelperOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperOne.swift; sourceTree = "<group>"; };
+		C5180EB22C87A78700DEBC08 /* Slot-Machine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Slot-Machine-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 		C506C0A72C595E1A00F6162B /* Slot Machine */ = {
 			isa = PBXGroup;
 			children = (
+				C5180EB22C87A78700DEBC08 /* Slot-Machine-Info.plist */,
+				C5180EAF2C87A02D00DEBC08 /* Helpers */,
 				C506C0C72C8799DD00F6162B /* Sounds */,
 				C506C0A82C595E1A00F6162B /* Slot_MachineApp.swift */,
 				C506C0C82C879A2100F6162B /* Views */,
@@ -107,6 +112,14 @@
 				C506C0AA2C595E1A00F6162B /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C5180EAF2C87A02D00DEBC08 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C5180EB02C87A09E00DEBC08 /* HelperOne.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +202,7 @@
 			files = (
 				C506C0AB2C595E1A00F6162B /* ContentView.swift in Sources */,
 				C506C0A92C595E1A00F6162B /* Slot_MachineApp.swift in Sources */,
+				C5180EB12C87A09E00DEBC08 /* HelperOne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +336,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Slot-Machine-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -360,6 +376,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Slot-Machine-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
