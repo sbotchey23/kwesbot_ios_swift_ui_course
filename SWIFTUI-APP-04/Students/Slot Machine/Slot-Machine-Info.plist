@@ -9,9 +9,7 @@
 		<key>UIImageName</key>
 		<string>gfx-slot-machine</string>
 		<key>UIImageRespectsSafeAreaInsets</key>
-		<false/>
-		<key>UILaunchScreen</key>
-		<string></string>
+		<true/>
 	</dict>
 </dict>
 </plist>
