@@ -5,11 +5,11 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
-		<string>gfx-background</string>
+		<string>ColorPurple</string>
 		<key>UIImageName</key>
-		<string>gfx-slot-machine</string>
+		<string>gfx-slot-machine-launch</string>
 		<key>UIImageRespectsSafeAreaInsets</key>
-		<true/>
+		<false/>
 	</dict>
 </dict>
 </plist>
