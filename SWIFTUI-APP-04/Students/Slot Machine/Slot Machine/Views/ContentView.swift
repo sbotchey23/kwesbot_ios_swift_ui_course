@@ -11,15 +11,36 @@ struct ContentView: View {
     // MARK: - PROPERTIES
     
     // MARK: - BODY
+    
     var body: some View {
         ZStack {
-            Text("Hello, world!")
+            // MARK: - BACKGROUND
+            LinearGradient(gradient: Gradient(colors: [Color("ColorPink"), Color("ColorPurple")]), startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea(.all)
+            
+            // MARK: - INTERFACE
+            VStack(alignment: .center, spacing: 5) {
+                
+                // MARK: - HEADER
+                LogoView()
+                
+                // MARK: - SCORE
+                // MARK: - SLOT MACHINE
+                // MARK: - FOOTER
+                
+            } //: VSTACK
+            .padding()
+            .frame(maxWidth: 720)
+            
+            // MARK: - POPUP
+            
+            
         } //: ZSTACK
-        .padding()
     }
 }
 
 // MARK: - PREVIEW
+
 #Preview {
     ContentView()
 }

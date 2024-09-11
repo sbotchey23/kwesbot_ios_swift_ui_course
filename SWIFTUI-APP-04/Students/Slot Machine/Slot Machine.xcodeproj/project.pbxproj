@@ -19,7 +19,8 @@
 		C506C0C42C8799C500F6162B /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C506C0BC2C8799C500F6162B /* win.mp3 */; };
 		C506C0C52C8799C500F6162B /* high-score.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C506C0BD2C8799C500F6162B /* high-score.mp3 */; };
 		C506C0C62C8799C500F6162B /* background-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C506C0BE2C8799C500F6162B /* background-music.mp3 */; };
-		C5180EB12C87A09E00DEBC08 /* HelperOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5180EB02C87A09E00DEBC08 /* HelperOne.swift */; };
+		C5180EB12C87A09E00DEBC08 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5180EB02C87A09E00DEBC08 /* Modifiers.swift */; };
+		C5180EB42C8BCD7000DEBC08 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5180EB32C8BCD7000DEBC08 /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +38,9 @@
 		C506C0BC2C8799C500F6162B /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 		C506C0BD2C8799C500F6162B /* high-score.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "high-score.mp3"; sourceTree = "<group>"; };
 		C506C0BE2C8799C500F6162B /* background-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music.mp3"; sourceTree = "<group>"; };
-		C5180EB02C87A09E00DEBC08 /* HelperOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperOne.swift; sourceTree = "<group>"; };
+		C5180EB02C87A09E00DEBC08 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		C5180EB22C87A78700DEBC08 /* Slot-Machine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Slot-Machine-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C5180EB32C8BCD7000DEBC08 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				C506C0AA2C595E1A00F6162B /* ContentView.swift */,
+				C5180EB32C8BCD7000DEBC08 /* LogoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,7 +120,7 @@
 		C5180EAF2C87A02D00DEBC08 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C5180EB02C87A09E00DEBC08 /* HelperOne.swift */,
+				C5180EB02C87A09E00DEBC08 /* Modifiers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -201,8 +204,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C506C0AB2C595E1A00F6162B /* ContentView.swift in Sources */,
+				C5180EB42C8BCD7000DEBC08 /* LogoView.swift in Sources */,
 				C506C0A92C595E1A00F6162B /* Slot_MachineApp.swift in Sources */,
-				C5180EB12C87A09E00DEBC08 /* HelperOne.swift in Sources */,
+				C5180EB12C87A09E00DEBC08 /* Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
