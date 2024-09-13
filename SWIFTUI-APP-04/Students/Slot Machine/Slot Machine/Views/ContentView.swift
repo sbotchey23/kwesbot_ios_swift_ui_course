@@ -23,17 +23,73 @@ struct ContentView: View {
                 
                 // MARK: - HEADER
                 LogoView()
+                    .padding(.top, 15)
+                
+                Spacer()
                 
                 // MARK: - SCORE
+                HStack {
+                    HStack(){
+                        Text("Your\nCoins".uppercased())
+                            .scoreLabelStyle()
+                            .multilineTextAlignment(.trailing)
+                        
+                        Text("100")
+                            .scoreNumberStyle()
+                            .modifier(ScoreNumberModifier())
+                        
+                    } //: HSTACK
+                    .modifier(ScoreContainerModifier())
+                    
+                    Spacer()
+                    
+                    HStack(){
+                        Text("200")
+                            .scoreNumberStyle()
+                            .modifier(ScoreNumberModifier())
+                        
+                        Text("High\nScore".uppercased())
+                            .scoreLabelStyle()
+                            .multilineTextAlignment(.leading)
+                
+                    } //: HSTACK
+                    .modifier(ScoreContainerModifier())
+                    
+                } //: HSTACK
+                
                 // MARK: - SLOT MACHINE
                 // MARK: - FOOTER
                 
+                Spacer()
             } //: VSTACK
-            .padding()
-            .frame(maxWidth: 720)
+            
+            // MARK: - BUTTONS
+            .overlay(
+                // RESET
+                Button(action: {
+                    print("Reset the game!")
+                }, label: {
+                    Image(systemName: "arrow.triangle.2.circlepath.circle")
+                    })
+                .modifier(ButtonModifier()),
+                alignment: .topLeading
+                )
+            
+            .overlay(
+                // INFO
+                Button(action: {
+                    print("Info View")
+                }, label: {
+                    Image(systemName: "info.circle")
+                    })
+                .modifier(ButtonModifier()),
+                alignment: .topTrailing
+                )
+            
+                .padding()
+                .frame(maxWidth: 720)
             
             // MARK: - POPUP
-            
             
         } //: ZSTACK
     }
