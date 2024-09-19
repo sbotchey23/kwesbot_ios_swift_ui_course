@@ -58,10 +58,100 @@ struct ContentView: View {
                 } //: HSTACK
                 
                 // MARK: - SLOT MACHINE
-                // MARK: - FOOTER
+                VStack(alignment: .center, spacing: 0){
+                    // MARK: - REEL #1
+                    ZStack {
+                        ReelView()
+                        
+                        Image("gfx-bell")
+                            .resizable()
+                            .modifier(ImageModifier())
+                    } //: ZSTACK
+                    
+                    HStack(alignment: .center, spacing: 0) {
+                        // MARK: - REEL #2
+                        ZStack {
+                            ReelView()
+                            
+                            Image("gfx-seven")
+                                .resizable()
+                                .modifier(ImageModifier())
+                        } //: ZSTACK
+                        
+                        Spacer()
+                        
+                        // MARK: - REEL #3
+                        ZStack {
+                            ReelView()
+                        
+                            Image("gfx-cherry")
+                                .resizable()
+                                .modifier(ImageModifier())
+                        } //: ZSTACK
+                    } //: HSTACK
+        
+                    .frame(maxWidth: 500)
+                    
+                    // MARK: - SPIN BUTTON
+                    Button(action: {
+                        print("Spin the reels")
+                    }) {
+                        Image("gfx-spin")
+                            .renderingMode(.original)
+                            .resizable()
+                            .modifier(ImageModifier())
+                    } //: BUTTON
+                    
+                } //: VSTACK - SLOT MACHINE
+                .layoutPriority(2)
                 
+                // MARK: - FOOTER
                 Spacer()
+                
+                HStack{
+                    // MARK: - BET 20
+                    HStack(alignment: .center, spacing: 10) {
+                        Button(action: {
+                            print("Bet 20 coins")
+                        }) {
+                            Text("20")
+                                .fontWeight(.heavy)
+                                .foregroundStyle(Color.white)
+                                .modifier(BetNumberModifier())
+                        } //: BUTTON
+                        .modifier(BetCapsuleModifier())
+                        
+                        Image("gfx-casino-chips")
+                            .resizable()
+                            .opacity(0)
+                            .modifier(CasinoChipsModifier())
+                        
+                    } //: HSATCK
+                    
+                    // MARK: - BET 10
+                    HStack(alignment: .center, spacing: 10) {
+                        Image("gfx-casino-chips")
+                            .resizable()
+                            .opacity(1)
+                            .modifier(CasinoChipsModifier())
+                        
+                        Button(action: {
+                            print("Bet 10 coins")
+                        }) {
+                            Text("10")
+                                .fontWeight(.heavy)
+                                .foregroundStyle(Color.yellow)
+                                .modifier(BetNumberModifier())
+                        } //: BUTTON
+                        .modifier(BetCapsuleModifier())
+                        
+                        
+                    } //: HSATCK
+                    
+                } //: HSTACK
+                
             } //: VSTACK
+            
             
             // MARK: - BUTTONS
             .overlay(
@@ -85,13 +175,13 @@ struct ContentView: View {
                 .modifier(ButtonModifier()),
                 alignment: .topTrailing
                 )
-            
                 .padding()
                 .frame(maxWidth: 720)
             
             // MARK: - POPUP
             
         } //: ZSTACK
+        
     }
 }
 
