@@ -19,15 +19,18 @@ struct InfoView: View {
                     FormRowView(firstItem: "Application", secondItem: "Slot Machine")
                     FormRowView(firstItem: "Platforms", secondItem: "iPhone, iPad, Mac")
                     FormRowView(firstItem: "Developer", secondItem: "Kwesbot")
-                    FormRowView(firstItem: <#String#>, secondItem: <#String#>)
-                    FormRowView(firstItem: <#String#>, secondItem: <#String#>)
-                    FormRowView(firstItem: <#String#>, secondItem: <#String#>)
+                    FormRowView(firstItem: "Designer", secondItem: "Kwesbot")
+                    FormRowView(firstItem: "Music", secondItem: "Botchey")
+                    FormRowView(firstItem: "Website", secondItem: "kwesbotltd.com")
+                    FormRowView(firstItem: "Copyright", secondItem: "© 2024 All rights reserved")
+                    FormRowView(firstItem: "Version", secondItem: "1.0.0")
                 } //: SECTION
                 
             } //: FORM
             .font(.system(.body, design: .rounded))
             
         } //: VSTACK
+        padding(.top, 40)
     }
 }
 
