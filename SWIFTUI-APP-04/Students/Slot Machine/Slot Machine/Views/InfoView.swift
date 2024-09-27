@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct InfoView: View {
+    // MARK: - PROPERTIES
+    @Environment(\.presentationMode) var presentationMode
+    
+    // MARK: - BODY
     var body: some View {
         VStack(alignment: .center, spacing: 10) {
             LogoView()
@@ -25,29 +29,27 @@ struct InfoView: View {
                     FormRowView(firstItem: "Copyright", secondItem: "© 2024 All rights reserved")
                     FormRowView(firstItem: "Version", secondItem: "1.0.0")
                 } //: SECTION
-                
             } //: FORM
             .font(.system(.body, design: .rounded))
             
         } //: VSTACK
-        padding(.top, 40)
+        .padding(.top, 40)
+        .overlay(
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "xmark.circle")
+                    .font(.title)
+            }
+                .padding(.top, 30)
+                .padding(.trailing, 20)
+                .tint(Color.secondary)
+            , alignment: .topTrailing
+            
+        ) //: OVERLAY
     }
 }
-
-struct FormRowView: View {
-    var firstItem: String
-    var secondItem: String
-    
-    var body: some View {
-        HStack {
-            Text(firstItem)
-                .foregroundStyle(Color.gray)
-            Spacer()
-            Text(secondItem)
-        }
-    }
-}
-
+// MARK: - PREVIEW
 #Preview {
     InfoView()
 }

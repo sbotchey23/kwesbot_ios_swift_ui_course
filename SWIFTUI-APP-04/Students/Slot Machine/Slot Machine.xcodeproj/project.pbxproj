@@ -80,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				C5180EB22C87A78700DEBC08 /* Slot-Machine-Info.plist */,
+				C506C0A82C595E1A00F6162B /* Slot_MachineApp.swift */,
 				C5180EAF2C87A02D00DEBC08 /* Helpers */,
 				C506C0C72C8799DD00F6162B /* Sounds */,
-				C506C0A82C595E1A00F6162B /* Slot_MachineApp.swift */,
 				C506C0C82C879A2100F6162B /* Views */,
 				C506C0AC2C595E1C00F6162B /* Assets.xcassets */,
 				C506C0AE2C595E1C00F6162B /* Slot_Machine.entitlements */,

@@ -87,3 +87,16 @@ struct CasinoChipsModifier: ViewModifier {
             .modifier(ShadowModifier())
     }
 }
+
+struct FormRowView: View {
+    var firstItem: String
+    var secondItem: String
+    
+    var body: some View {
+        HStack {
+            Text(firstItem).foregroundStyle(Color.gray)
+            Spacer()
+            Text(secondItem)
+        }
+    }
+}
