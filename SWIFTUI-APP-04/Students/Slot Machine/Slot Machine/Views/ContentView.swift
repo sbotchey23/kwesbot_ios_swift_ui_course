@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - PROPERTIES
     let symbols = ["gfx-bell", "gfx-cherry", "gfx-coin", "gfx-grape", "gfx-seven", "gfx-strawberry"]
+    let haptics = UINotificationFeedbackGenerator()
     
     @State private var highscore: Int = UserDefaults.standard.integer(forKey: "HighScore")
     @State private var coins: Int = 100
@@ -34,6 +35,7 @@ struct ContentView: View {
             Int.random(in: 0...symbols.count - 1)
         })
         playSound(sound: "spin", type: "mp3")
+        haptics.notificationOccurred(.success)
     }
     
     // CHECK THE WINNING
@@ -73,6 +75,7 @@ struct ContentView: View {
         isActiveBet20 = true
         isActiveBet10 = false
         playSound(sound: "casino-chips", type: "mp3")
+        haptics.notificationOccurred(.success)
     }
     
     func activateBet10() {
@@ -80,6 +83,7 @@ struct ContentView: View {
         isActiveBet10 = true
         isActiveBet20 = false
         playSound(sound: "casino-chips", type: "mp3")
+        haptics.notificationOccurred(.success)
     }
     
     // GAME IS OVER
@@ -98,7 +102,6 @@ struct ContentView: View {
         activateBet10()
     }
     
-    
     // MARK: - BODY
     
     var body: some View {
@@ -112,7 +115,6 @@ struct ContentView: View {
                 
                 // MARK: - HEADER
                 LogoView()
-                    .padding(.top, 15)
                 
                 Spacer()
                 
@@ -158,9 +160,10 @@ struct ContentView: View {
                             .modifier(ImageModifier())
                             .opacity(animatingSymbol ? 1: 0)
                             .offset(y: animatingSymbol ? 0 : -60)
-                            .animation(.easeOut(duration: Double.random(in: 0.8...1.4)), value: animatingSymbol)
+                            .animation(.easeOut(duration: Double.random(in: 1.0...1.7)), value: animatingSymbol)
                             .onAppear(perform: {
                                 self.animatingSymbol.toggle()
+                                playSound(sound: "riseup", type: "mp3")
                             })
                     } //: ZSTACK
                     
@@ -175,7 +178,7 @@ struct ContentView: View {
                                 .modifier(ImageModifier())
                                 .opacity(animatingSymbol ? 1: 0)
                                 .offset(y: animatingSymbol ? 0 : -60)
-                                .animation(.easeOut(duration: Double.random(in: 0.8...1.4)), value: animatingSymbol)
+                                .animation(.easeOut(duration: Double.random(in: 0.8...1.5)), value: animatingSymbol)
                                 .onAppear(perform: {
                                     self.animatingSymbol.toggle()
                                 })
@@ -192,7 +195,7 @@ struct ContentView: View {
                                 .modifier(ImageModifier())
                                 .opacity(animatingSymbol ? 1: 0)
                                 .offset(y: animatingSymbol ? 0 : -60)
-                                .animation(.easeOut(duration: Double.random(in: 0.8...1.4)), value: animatingSymbol)
+                                .animation(.easeOut(duration: Double.random(in: 1.2...1.9)), value: animatingSymbol)
                                 .onAppear(perform: {
                                     self.animatingSymbol.toggle()
                                 })
@@ -277,13 +280,11 @@ struct ContentView: View {
                         } //: BUTTON
                         .modifier(BetCapsuleModifier())
                         
-                        
                     } //: HSTACK
                     
                 } //: HSTACK
                 
             } //: VSTACK
-            
             
             // MARK: - OVERLAY BUTTONS
             .overlay(
@@ -387,7 +388,6 @@ struct ContentView: View {
         .sheet(isPresented: $showingInfoView) {
             InfoView()
         }
-        
     }
 }
 
