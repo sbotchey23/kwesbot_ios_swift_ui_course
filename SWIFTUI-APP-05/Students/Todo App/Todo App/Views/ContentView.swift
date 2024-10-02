@@ -16,7 +16,8 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
-
+    
+    @State private var showingAddTodoView: Bool = false
     
     // MARK: - BODY
     var body: some View {
@@ -28,8 +29,10 @@ struct ContentView: View {
                     } label: {
                         Text(item.timestamp!, formatter: itemFormatter)
                     } //: NAVIGATION LINK
+                    
                 } //: FOR EACH
                 .onDelete(perform: deleteItems)
+                
             } //: LIST
             .navigationBarTitle("Todo", displayMode: .inline)
             .toolbar {
@@ -39,11 +42,18 @@ struct ContentView: View {
                 }
 #endif
                 ToolbarItem {
-                    Button(action: addItem) {
+                    Button(action: {
+                        self.showingAddTodoView.toggle()
+                    }) {
                         Label("Add Item", systemImage: "plus")
                     } //: ADD BUTTON
+                    .sheet(isPresented: $showingAddTodoView) {
+                        AddTodoView()
+                    }
+                    
                 } //: TOOLBAR ITEM
-            }
+                
+            } //: TOOLBAR
             Text("Select an item")
         } //: NAVIGATION VIEW
     }
@@ -83,7 +93,7 @@ struct ContentView: View {
 private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
-    formatter.timeStyle = .medium
+    formatter.timeStyle = .short
     return formatter
 }()
 
