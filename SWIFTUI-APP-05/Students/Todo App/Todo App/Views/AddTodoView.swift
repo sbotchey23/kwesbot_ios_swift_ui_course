@@ -9,12 +9,18 @@ import SwiftUI
 
 struct AddTodoView: View {
     // MARK: - PROPERTIES
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.managedObjectContext) var viewContext
     
     @State private var name: String = ""
     @State private var priority: String = "Normal"
     
     let priorities = ["High", "Normal", "Low"]
+    
+    @State private var errorShowing: Bool = false
+    @State private var errorTitle: String = ""
+    @State private var errorMessage: String = ""
+
     
     // MARK: - BODY
     var body: some View {
@@ -34,7 +40,24 @@ struct AddTodoView: View {
                     
                     // MARK: - SAVE BUTTON
                     Button(action: {
-                        print("Save a new todo item.")
+                        if self.name != "" {
+                            let todo = Todo(context: self.viewContext)
+                            print("New todo: \(todo.name ?? ""), Priority: \(todo.priority ?? "")")
+                            todo.name = self.name
+                            todo.priority = self.priority
+                            
+                            do {
+                                try self.viewContext.save()
+                            } catch {
+                                print(error)
+                            }
+                        } else {
+                            self.errorShowing = true
+                            self.errorTitle = "Invalid Name"
+                            self.errorMessage = "Make sure you enter something for \nthe todo item!"
+                            return
+                        }
+                        self.dismiss()
                     }) {
                         Text("Save")
                     } //: SAVE BUTTON
@@ -51,7 +74,10 @@ struct AddTodoView: View {
                         dismiss()
                     }
                 }
-            }
+            } //: TOOLBAR
+            .alert(isPresented: $errorShowing) {
+                Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+            } //: ALERT
         } //: NAVIGATION VIEW
     }
 }
