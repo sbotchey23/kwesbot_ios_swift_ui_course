@@ -19,6 +19,7 @@ struct ContentView: View {
         var todos: FetchedResults<Todo>
     
     @State private var showingAddTodoView: Bool = false
+    @State private var animatingButton: Bool = false
     
     // MARK: - BODY
     var body: some View {
@@ -63,6 +64,42 @@ struct ContentView: View {
                 }
                 
             } //: ZSTACK
+            .sheet(isPresented: $showingAddTodoView) {
+                AddTodoView().environment(\.managedObjectContext, self.viewContext)
+            }
+            .overlay(
+                ZStack {
+                    Group {
+                        Circle()
+                            .fill(Color.blue)
+                            .opacity(self.animatingButton ? 0.2 : 0)
+                            .scaleEffect(self.animatingButton ? 1 : 0.5)
+                            .frame(width: 68, height: 68, alignment: .center)
+                        Circle()
+                            .fill(Color.blue)
+                            .opacity(self.animatingButton ? 0.15 : 0)
+                            .scaleEffect(self.animatingButton ? 1 : 0.5)
+                            .frame(width: 88, height: 88, alignment: .center)
+                    }
+                    .animation(Animation.easeInOut(duration: 1.3).repeatForever(autoreverses: true), value: animatingButton)
+                    
+                    Button(action: {
+                        self.showingAddTodoView.toggle()
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .background(Circle().fill(Color("ColorBase")))
+                            .frame(width: 48, height: 48)
+                    } //: ADD BUTTON
+                    .onAppear(perform: {
+                        self.animatingButton.toggle()
+                    })
+                } //: ZSTACK
+                    .padding(.bottom, 15)
+                    .padding(.trailing, 15)
+                , alignment: .bottomTrailing
+            ) //: OVERLAY
             
         } //: NAVIGATION VIEW
     }

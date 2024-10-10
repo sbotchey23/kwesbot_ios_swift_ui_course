@@ -46,7 +46,6 @@ struct AddTodoView: View {
                     Button(action: {
                         if self.name != "" {
                             let todo = Todo(context: self.viewContext)
-                            print("New todo: \(todo.name ?? ""), Priority: \(todo.priority ?? "")")
                             todo.name = self.name
                             todo.priority = self.priority
                             
@@ -64,6 +63,12 @@ struct AddTodoView: View {
                         self.dismiss()
                     }) {
                         Text("Save")
+                            .font(.system(size: 24, weight: .bold, design: .default))
+                            .padding()
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .background(Color.blue)
+                            .clipShape(RoundedRectangle(cornerRadius: 9))
+                            .foregroundStyle(Color.white)
                     } //: SAVE BUTTON
                     
                 } //: VSTACK
