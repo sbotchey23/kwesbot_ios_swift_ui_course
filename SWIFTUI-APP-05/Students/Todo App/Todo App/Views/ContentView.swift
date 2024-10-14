@@ -18,6 +18,7 @@ struct ContentView: View {
         animation: .default)
         var todos: FetchedResults<Todo>
     
+    @State private var showingSettingsView: Bool = false
     @State private var showingAddTodoView: Bool = false
     @State private var animatingButton: Bool = false
     
@@ -48,12 +49,13 @@ struct ContentView: View {
 #endif
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(action: {
-                            self.showingAddTodoView.toggle()
+                            self.showingSettingsView.toggle()
                         }) {
-                            Label("Add Item", systemImage: "plus")
+                            Label("Settings", systemImage: "paintbrush")
+                                .imageScale(.large)
                         } //: ADD BUTTON
-                        .sheet(isPresented: $showingAddTodoView) {
-                            AddTodoView().environment(\.managedObjectContext, self.viewContext)
+                        .sheet(isPresented: $showingSettingsView) {
+                            SettingsView()
                         }
                     } //: TOOLBAR ITEM
                 } //: TOOLBAR

@@ -7,7 +7,7 @@
 		<key>UIColorName</key>
 		<string>LaunchBackgroundColor</string>
 		<key>UIImageName</key>
-		<string>todo-app-logo</string>
+		<string>todo-app-logo-launch</string>
 	</dict>
 </dict>
 </plist>
