@@ -1,0 +1,51 @@
+//
+//  HeaderView.swift
+//  Honeymoon
+//
+//  Created by Kwesi A Botchey on 26/10/2024.
+//
+
+import SwiftUI
+
+struct HeaderView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
+    var body: some View {
+        HStack {
+            Button(action:{
+                // ACTION
+                print("Information")
+            }) {
+                Image(systemName: "info.circle")
+                    .font(.system(size: 24, weight: .regular))
+            } //: BUTTON
+            .tint(Color.primary)
+            
+            Spacer()
+            
+            Image("logo-honeymoon-pink")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 28)
+            
+            Spacer()
+            
+            Button(action:{
+                // ACTION
+                print("Guide")
+            }) {
+                Image(systemName: "questionmark.circle")
+                    .font(.system(size: 24, weight: .regular))
+            } //: BUTTON
+            .tint(Color.primary)
+            
+        } //: HSTACK
+        .padding()
+    }
+}
+
+// MARK: - PREVIEW
+#Preview(traits: .fixedLayout(width: 375, height: 80)) {
+    HeaderView()
+}
