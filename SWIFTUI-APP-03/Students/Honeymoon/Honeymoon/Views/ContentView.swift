@@ -11,15 +11,16 @@ struct ContentView: View {
     // MARK: - PROPERTIES
     @State var showAlert: Bool = false
     @State var showGuide: Bool = false
+    @State var showInfo: Bool = false
     
     // MARK: - BODY
     var body: some View {
         VStack {
-            HeaderView(showGuideView: $showGuide)
+            HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
             
             Spacer()
             
-            CardView(honeymoon: honeymoonData[3])
+            CardView(honeymoon: honeymoonData[12])
             // FIXME: Add padding to the cards later on
                 .padding()
             

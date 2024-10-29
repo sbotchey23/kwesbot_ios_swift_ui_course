@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GuideView: View {
     // MARK: - PROPERTIES
+    @Environment(\.dismiss) var dismiss
     
     // MARK: - BODY
     var body: some View {
@@ -20,8 +21,7 @@ struct GuideView: View {
                 
                 Text("Get Started!")
                     .fontWeight(.black)
-                    .font(.largeTitle)
-                    .foregroundStyle(Color.pink)
+                    .modifier(TitleModifier())
                 
                 Text("Discover and pick the perfect destination for your romantic honeymoon!")
                     .lineLimit(nil)
@@ -42,14 +42,11 @@ struct GuideView: View {
                 
                 Button(action: {
                     // ACTION
-                    print("Button tapped")
+                    //print("Button tapped")
+                    self.dismiss()
                 }) {
                     Text("Continue".uppercased())
-                        .font(.headline)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .background(Capsule().fill(Color.pink))
-                        .foregroundStyle(Color.white)
+                        .modifier(ButtonModifier())
                 } //: BUTTON
                 
             } //: VSTACK
