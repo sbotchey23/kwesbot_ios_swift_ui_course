@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InfoView: View {
     // MARK: - PROPERTIES
+    @Environment(\.dismiss) var dismiss
     
     // MARK: - BODY
     var body: some View {
@@ -34,8 +35,8 @@ struct InfoView: View {
                 
                 Button(action: {
                     // ACTION
-                    print("Button tapped")
-                    //self.dismiss()
+                    //print("Button tapped")
+                    self.dismiss()
                 }) {
                     Text("Continue".uppercased())
                         .modifier(ButtonModifier())
